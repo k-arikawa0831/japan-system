@@ -1,0 +1,103 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.footer {
+  background: #0F1C2E;
+  color: $color-white;
+}
+
+.inner {
+  @include inner;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 64px 0 48px;
+
+  @include sp {
+    flex-direction: column;
+    gap: 36px;
+    padding: 48px 0 36px;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.logoMain {
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.08em;
+}
+
+.logoSub {
+  font-size: 9px;
+  opacity: 0.4;
+  letter-spacing: 0.15em;
+}
+
+.address {
+  font-style: normal;
+  font-size: 13px;
+  line-height: 2;
+  opacity: 0.6;
+}
+
+.nav {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px 48px;
+
+    @include sp {
+      gap: 4px 32px;
+    }
+  }
+
+  a {
+    font-size: 13px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    letter-spacing: 0.04em;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.social {
+  flex-shrink: 0;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 20px $content-padding;
+
+  small {
+    font-size: 11px;
+    opacity: 0.35;
+    letter-spacing: 0.05em;
+  }
+}

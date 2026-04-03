@@ -1,0 +1,25 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.inner {
+  @include inner;
+}
+
+.staff {
+  padding: 100px 0;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

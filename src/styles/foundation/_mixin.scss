@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+@mixin sp {
+  @media (max-width: $bp-sp) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media (min-width: ($bp-sp + 1)) and (max-width: $bp-tb) {
+    @content;
+  }
+}
+
+@mixin tb-up {
+  @media (min-width: ($bp-sp + 1)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: ($bp-tb + 1)) {
+    @content;
+  }
+}
+
+@mixin inner {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $content-padding;
+}
+
+@mixin section-padding {
+  padding: $section-padding 0;
+
+  @include sp {
+    padding: $section-padding-sp 0;
+  }
+}

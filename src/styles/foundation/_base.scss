@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  color: $color-text;
+  background-color: $color-white;
+  line-height: 1.9;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+}
+
+main {
+  min-height: 50vh;
+}
+
+::selection {
+  background: rgba($color-primary, 0.15);
+}

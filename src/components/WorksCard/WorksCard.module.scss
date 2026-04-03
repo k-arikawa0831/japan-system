@@ -1,0 +1,82 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.card {
+  display: block;
+  background: $color-white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s $ease-out;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.thumbnail {
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s;
+  }
+
+  .card:hover &::after {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.placeholder {
+  font-size: 13px;
+  color: $color-text-light;
+  letter-spacing: 0.15em;
+  font-weight: $font-weight-medium;
+}
+
+.body {
+  padding: 24px;
+}
+
+.category {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  padding: 3px 12px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+.title {
+  font-size: 16px;
+  color: $color-secondary;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: $color-text-light;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 13px;
+  color: $color-text-light;
+  line-height: 1.7;
+}

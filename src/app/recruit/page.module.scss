@@ -1,0 +1,256 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.inner {
+  @include inner;
+}
+
+.hero {
+  background: linear-gradient(135deg, $color-primary 0%, darken($color-primary, 15%) 100%);
+  color: $color-white;
+  padding: 140px 0 80px;
+
+  @include sp {
+    padding: 100px 0 60px;
+  }
+}
+
+.recruitEn {
+  display: block;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.25em;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+
+.recruitJa {
+  font-size: 36px;
+  margin-bottom: 32px;
+  @include sp { font-size: 26px; }
+}
+
+.heroMessage {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @include sp {
+    font-size: 24px;
+  }
+}
+
+.heroText {
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  color: $color-secondary;
+  margin-bottom: 32px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $color-primary;
+}
+
+/* 魅力 */
+.appeal {
+  padding: 100px 0;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.appealGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.appealCard {
+  background: $color-bg;
+  padding: 32px 24px;
+  border-radius: 8px;
+
+  h3 {
+    font-size: 18px;
+    color: $color-secondary;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-text-light;
+    line-height: 1.8;
+  }
+}
+
+.appealIcon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* 募集要項 */
+.requirements {
+  padding: 100px 0;
+  background: $color-bg;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.jobTitle {
+  font-size: 18px;
+  color: $color-primary;
+  margin-bottom: 20px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  font-size: 15px;
+
+  th, td {
+    padding: 16px 20px;
+    border: 1px solid $color-border;
+    vertical-align: top;
+  }
+
+  th {
+    background: $color-secondary;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    white-space: nowrap;
+    width: 140px;
+
+    @include sp {
+      width: 110px;
+      font-size: 13px;
+      padding: 12px;
+    }
+  }
+
+  td {
+    background: $color-white;
+
+    @include sp {
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+}
+
+/* キャリアステップ */
+.career {
+  padding: 100px 0;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.steps {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 40px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.stepDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: $color-primary;
+  flex-shrink: 0;
+  margin-top: 4px;
+  z-index: 1;
+}
+
+.stepLine {
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  bottom: 0;
+  width: 2px;
+  background: $color-border;
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepYear {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  background: rgba($color-primary, 0.08);
+  padding: 2px 12px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.stepDesc {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* 応募方法 */
+.apply {
+  padding: 100px 0;
+  background: $color-bg;
+  text-align: center;
+
+  @include sp {
+    padding: 64px 0;
+  }
+
+  .sectionTitle {
+    text-align: left;
+  }
+}
+
+.applyText {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 32px;
+}
+
+.applyButton {
+  display: inline-block;
+  background: $color-primary;
+  color: $color-white;
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  padding: 16px 48px;
+  border-radius: 4px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+}

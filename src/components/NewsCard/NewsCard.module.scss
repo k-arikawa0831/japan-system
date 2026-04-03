@@ -1,0 +1,57 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.card {
+  border-bottom: 1px solid $color-border;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  transition: all 0.3s;
+
+  &:hover {
+    padding-left: 8px;
+
+    .title {
+      color: $color-primary;
+    }
+  }
+
+  @include sp {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 0;
+  }
+}
+
+.date {
+  font-size: 14px;
+  color: $color-text-light;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+
+.category {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: $font-weight-bold;
+  color: $color-white;
+  background: $color-secondary;
+  padding: 3px 14px;
+  border-radius: 50px;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+
+.title {
+  font-size: 15px;
+  color: $color-text;
+  transition: color 0.3s;
+
+  @include sp {
+    width: 100%;
+  }
+}

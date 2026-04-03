@@ -1,0 +1,221 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.inner {
+  @include inner;
+}
+
+/* Anchor Nav */
+.anchorNav {
+  background: $color-white;
+  border-bottom: 1px solid $color-border;
+  position: sticky;
+  top: 90px;
+  z-index: 50;
+
+  @include sp {
+    top: 64px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+
+    @include sp {
+      overflow-x: auto;
+      justify-content: flex-start;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    color: $color-text;
+    white-space: nowrap;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    @include sp {
+      padding: 12px 16px;
+      font-size: 13px;
+    }
+  }
+}
+
+/* Section */
+.section {
+  padding: 100px 0;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.sectionAlt {
+  background: $color-bg;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  color: $color-secondary;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid $color-primary;
+
+  @include sp {
+    font-size: 20px;
+  }
+}
+
+.sectionIcon {
+  font-size: 32px;
+}
+
+.sectionLead {
+  font-size: 15px;
+  color: $color-text;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.h3 {
+  font-size: 18px;
+  color: $color-secondary;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  padding-left: 12px;
+  border-left: 4px solid $color-primary;
+
+  @include sp {
+    font-size: 16px;
+    margin-top: 32px;
+  }
+}
+
+/* Lists */
+.checkList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+
+  @include sp {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    font-size: 15px;
+    padding-left: 24px;
+    position: relative;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $color-primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.list {
+  li {
+    font-size: 15px;
+    padding: 4px 0 4px 24px;
+    position: relative;
+
+    &::before {
+      content: '・';
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.note {
+  font-size: 13px;
+  color: $color-text-light;
+  margin-top: 12px;
+}
+
+/* Table */
+.tableWrap {
+  overflow-x: auto;
+  margin-bottom: 8px;
+}
+
+.table {
+  width: 100%;
+  font-size: 14px;
+
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid $color-border;
+  }
+
+  th {
+    background: $color-secondary;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    white-space: nowrap;
+  }
+
+  td {
+    background: $color-white;
+  }
+}
+
+/* Flow */
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    font-size: 15px;
+    border-bottom: 1px solid $color-border;
+  }
+}
+
+.flowNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: $color-primary;
+  color: $color-white;
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  flex-shrink: 0;
+}
+
+/* Tags */
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 14px;
+  padding: 6px 16px;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+}

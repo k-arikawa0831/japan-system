@@ -1,0 +1,27 @@
+@use '@/styles/foundation/variables' as *;
+
+.fadeIn {
+  opacity: 0;
+  transition: opacity 0.8s $ease-out, transform 0.8s $ease-out;
+
+  &.up {
+    transform: translateY(40px);
+  }
+
+  &.left {
+    transform: translateX(-40px);
+  }
+
+  &.right {
+    transform: translateX(40px);
+  }
+
+  &.none {
+    transform: none;
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}

@@ -1,0 +1,72 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.title {
+  margin-bottom: 56px;
+
+  @include sp {
+    margin-bottom: 40px;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.left {
+    text-align: left;
+  }
+}
+
+.en {
+  display: block;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+
+  .dark & {
+    color: $color-primary;
+  }
+
+  .light & {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.ja {
+  font-size: 32px;
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+
+  @include sp {
+    font-size: 24px;
+  }
+
+  .dark & {
+    color: $color-secondary;
+  }
+
+  .light & {
+    color: $color-white;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: $color-primary;
+    margin-top: 16px;
+
+    .center & {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .light & {
+      background: $color-white;
+    }
+  }
+}

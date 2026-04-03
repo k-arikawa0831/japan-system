@@ -1,0 +1,223 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.inner {
+  @include inner;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  color: $color-secondary;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $color-primary;
+}
+
+/* 代表挨拶 */
+.greeting {
+  padding: 100px 0;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.greetingTitle {
+  font-size: 28px;
+  color: $color-secondary;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @include sp {
+    font-size: 22px;
+    margin-bottom: 32px;
+  }
+}
+
+.greetingContent {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  @include sp {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.greetingPhoto {
+  flex-shrink: 0;
+  width: 280px;
+
+  @include sp {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.placeholder {
+  aspect-ratio: 3 / 4;
+  background: $color-border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-light;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.greetingText {
+  p {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 16px;
+  }
+}
+
+.sign {
+  font-weight: $font-weight-bold;
+  font-size: 16px !important;
+  margin-top: 24px !important;
+}
+
+/* 会社情報 */
+.info {
+  padding: 100px 0;
+  background: $color-bg;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  font-size: 15px;
+
+  th, td {
+    padding: 16px 20px;
+    border: 1px solid $color-border;
+    vertical-align: top;
+  }
+
+  th {
+    background: $color-secondary;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    white-space: nowrap;
+    width: 160px;
+
+    @include sp {
+      width: 120px;
+      font-size: 13px;
+      padding: 12px;
+    }
+  }
+
+  td {
+    background: $color-white;
+
+    @include sp {
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+}
+
+/* 保有資格 */
+.qualifications {
+  padding: 100px 0;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.qualList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  li {
+    font-size: 15px;
+    padding: 8px 20px;
+    background: $color-bg;
+    border-left: 4px solid $color-primary;
+  }
+}
+
+/* 地域貢献 */
+.community {
+  padding: 100px 0;
+  background: $color-bg;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.communityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.communityCard {
+  background: $color-white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 24px;
+
+  h3 {
+    font-size: 18px;
+    color: $color-secondary;
+    margin: 16px 0 8px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-text-light;
+    line-height: 1.8;
+  }
+}
+
+.communityPhoto {
+  .placeholder {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* アクセス */
+.access {
+  padding: 100px 0;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.map {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mapPlaceholder {
+  aspect-ratio: 16 / 9;
+  background: $color-border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-light;
+  font-size: 14px;
+  max-height: 400px;
+}

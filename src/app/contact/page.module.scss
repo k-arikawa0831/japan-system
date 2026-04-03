@@ -1,0 +1,147 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.inner {
+  @include inner;
+}
+
+.contact {
+  padding: 100px 0;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+/* Tel Box */
+.telBox {
+  text-align: center;
+  background: $color-bg;
+  padding: 32px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.telLabel {
+  font-size: 14px;
+  color: $color-text-light;
+  margin-bottom: 8px;
+}
+
+.telNumber {
+  font-size: 36px;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  letter-spacing: 0.05em;
+
+  @include sp {
+    font-size: 28px;
+  }
+}
+
+.telNote {
+  font-size: 13px;
+  color: $color-text-light;
+  margin-top: 8px;
+}
+
+/* Form */
+.formArea {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.formTitle {
+  font-size: 20px;
+  color: $color-secondary;
+  margin-bottom: 12px;
+}
+
+.formNote {
+  font-size: 14px;
+  color: $color-text-light;
+  margin-bottom: 32px;
+}
+
+.required {
+  color: $color-primary;
+  font-weight: $font-weight-bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  background: $color-white;
+  transition: border-color 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+  }
+
+  &::placeholder {
+    color: #bbb;
+  }
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitArea {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.demoNote {
+  font-size: 13px;
+  color: $color-primary;
+  margin-bottom: 16px;
+}
+
+.submitButton {
+  display: inline-block;
+  background: $color-primary;
+  color: $color-white;
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  padding: 16px 64px;
+  border-radius: 4px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+}

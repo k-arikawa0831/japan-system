@@ -1,0 +1,57 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.pageHeader {
+  background: $color-secondary;
+  color: $color-white;
+  padding: 140px 0 60px;
+  position: relative;
+  overflow: hidden;
+
+  @include sp {
+    padding: 100px 0 40px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+  }
+}
+
+.inner {
+  @include inner;
+  position: relative;
+}
+
+.en {
+  display: block;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 12px;
+}
+
+.ja {
+  font-size: 36px;
+  letter-spacing: 0.06em;
+
+  @include sp {
+    font-size: 26px;
+  }
+}
+
+.description {
+  margin-top: 16px;
+  font-size: 15px;
+  opacity: 0.6;
+  line-height: 1.8;
+  max-width: 600px;
+}

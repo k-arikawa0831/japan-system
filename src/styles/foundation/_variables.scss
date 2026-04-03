@@ -1,0 +1,33 @@
+// Colors — refined palette
+$color-primary: #C8352E;
+$color-primary-dark: #A12A24;
+$color-secondary: #1A2E44;
+$color-secondary-light: #2A4060;
+$color-accent: #E6960C;
+$color-bg: #F7F7F5;
+$color-bg-dark: #1A2E44;
+$color-text: #2D2D2D;
+$color-text-light: #6B7280;
+$color-border: #E5E5E5;
+$color-white: #FFFFFF;
+
+// Font
+$font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Breakpoints
+$bp-sp: 767px;
+$bp-tb: 1023px;
+
+// Layout
+$content-width: 1140px;
+$content-padding: 24px;
+
+// Spacing
+$section-padding: 120px;
+$section-padding-sp: 72px;
+
+// Transition
+$ease-out: cubic-bezier(0.16, 1, 0.3, 1);

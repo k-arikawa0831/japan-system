@@ -1,0 +1,200 @@
+@use '@/styles/foundation/variables' as *;
+@use '@/styles/foundation/mixin' as *;
+
+.inner {
+  @include inner;
+  max-width: 860px;
+}
+
+.pageHeader {
+  background: $color-bg;
+  padding: 24px 0;
+}
+
+.back {
+  font-size: 14px;
+  color: $color-primary;
+  font-weight: $font-weight-bold;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.article {
+  padding: 60px 0 80px;
+
+  @include sp {
+    padding: 40px 0 60px;
+  }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.category {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  padding: 2px 12px;
+  border-radius: 2px;
+}
+
+.area {
+  font-size: 13px;
+  color: $color-text-light;
+}
+
+.title {
+  font-size: 26px;
+  color: $color-secondary;
+  line-height: 1.5;
+  margin-bottom: 32px;
+
+  @include sp {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+.mainImage {
+  aspect-ratio: 16 / 9;
+  background: $color-border;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+  max-height: 400px;
+
+  @include sp {
+    margin-bottom: 32px;
+  }
+}
+
+.placeholder {
+  font-size: 14px;
+  color: $color-text-light;
+  letter-spacing: 0.1em;
+}
+
+/* Section */
+.section {
+  margin-bottom: 48px;
+
+  @include sp {
+    margin-bottom: 36px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.h2 {
+  font-size: 20px;
+  color: $color-secondary;
+  margin-bottom: 16px;
+  padding-left: 12px;
+  border-left: 4px solid $color-primary;
+
+  @include sp {
+    font-size: 18px;
+  }
+}
+
+.text {
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* 概要テーブル */
+.overviewTable {
+  margin-bottom: 20px;
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px 16px;
+    border: 1px solid $color-border;
+    text-align: left;
+  }
+
+  th {
+    background: $color-secondary;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    white-space: nowrap;
+    width: 100px;
+  }
+
+  td {
+    background: $color-white;
+  }
+}
+
+/* 作業内容リスト */
+.scopeList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    font-size: 15px;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.7;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $color-primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+/* ポイントボックス */
+.pointBox {
+  background: rgba($color-primary, 0.05);
+  border-left: 4px solid $color-primary;
+  padding: 20px 24px;
+  border-radius: 0 8px 8px 0;
+
+  p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}
+
+/* ギャラリー */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @include sp {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.galleryItem {
+  aspect-ratio: 4 / 3;
+  background: $color-border;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
