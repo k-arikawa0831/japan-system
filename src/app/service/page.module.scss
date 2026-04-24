@@ -219,3 +219,49 @@
   border: 1px solid $color-border;
   border-radius: 12px;
 }
+
+/* 2-column Section Layout (text left, photo right) */
+.sectionLayout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 48px;
+  align-items: start;
+
+  @include tb {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.sectionContent {
+  min-width: 0;
+}
+
+.sectionImage {
+  align-self: center;
+}
+
+.sectionImagePhoto {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  background-color: $color-bg;
+  border-radius: 8px;
+}
+
+.sectionImagePhotoSales {
+  background-image: url('/images/product-extinguisher-business.jpg');
+}
+
+.sectionImagePhotoConstruction {
+  background-image: url('/images/service-construction.jpg');
+}
+
+.sectionImagePhotoElectrical {
+  background-image: url('/images/service-electrical.jpg');
+}
+
+.sectionImagePhotoInspection {
+  background-image: url('/images/service-inspection.jpg');
+}

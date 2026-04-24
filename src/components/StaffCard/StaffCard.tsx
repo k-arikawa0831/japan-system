@@ -10,9 +10,10 @@ export default function StaffCard({ item }: Props) {
 
   return (
     <div className={styles.card}>
-      <div className={styles.photo}>
-        <span className={styles.placeholder}>PHOTO</span>
-      </div>
+      <div
+        className={styles.photo}
+        style={{ backgroundImage: `url(/images/staff-${item.id}.jpg)` }}
+      />
       <div className={styles.body}>
         <h3 className={styles.name}>{item.name}</h3>
         <div className={styles.meta}>

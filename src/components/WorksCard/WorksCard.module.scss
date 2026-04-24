@@ -17,10 +17,9 @@
 
 .thumbnail {
   aspect-ratio: 16 / 10;
-  background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #e8e8e8;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
   position: relative;
 
@@ -35,13 +34,6 @@
   .card:hover &::after {
     background: rgba(0, 0, 0, 0.05);
   }
-}
-
-.placeholder {
-  font-size: 13px;
-  color: $color-text-light;
-  letter-spacing: 0.15em;
-  font-weight: $font-weight-medium;
 }
 
 .body {

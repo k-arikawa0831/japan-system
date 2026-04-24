@@ -2,18 +2,36 @@
 @use '@/styles/foundation/mixin' as *;
 
 .cta {
-  background: $color-secondary;
+  background-color: $color-secondary;
+  background-image: url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
   color: $color-white;
   padding: 80px 0;
+  position: relative;
+  overflow: hidden;
 
   @include sp {
     padding: 56px 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba($color-secondary, 0.9) 0%,
+      rgba($color-secondary, 0.8) 100%
+    );
   }
 }
 
 .inner {
   @include inner;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .en {

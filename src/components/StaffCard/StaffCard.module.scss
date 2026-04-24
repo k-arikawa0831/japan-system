@@ -10,18 +10,10 @@
 
 .photo {
   aspect-ratio: 1;
-  background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #e8e8e8;
+  background-size: cover;
+  background-position: center top;
   max-height: 300px;
-}
-
-.placeholder {
-  font-size: 13px;
-  color: $color-text-light;
-  letter-spacing: 0.15em;
-  font-weight: $font-weight-medium;
 }
 
 .body {

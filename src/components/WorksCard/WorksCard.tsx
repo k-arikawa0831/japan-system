@@ -9,9 +9,10 @@ type Props = {
 export default function WorksCard({ item }: Props) {
   return (
     <Link href={`/works/${item.id}`} className={styles.card}>
-      <div className={styles.thumbnail}>
-        <span className={styles.placeholder}>PHOTO</span>
-      </div>
+      <div
+        className={styles.thumbnail}
+        style={{ backgroundImage: `url(/images/works-${item.id}.jpg)` }}
+      />
       <div className={styles.body}>
         <span className={styles.category}>{item.category}</span>
         <h3 className={styles.title}>{item.title}</h3>

@@ -108,39 +108,46 @@ export default function ServicePage() {
             </table>
           </div>
 
-          <h3 className={styles.h3}>消防署への報告義務</h3>
-          <ul className={styles.list}>
-            <li>特定防火対象物（飲食店・ホテル等）：<strong>1年に1回</strong></li>
-            <li>非特定防火対象物（マンション・事務所等）：<strong>3年に1回</strong></li>
-          </ul>
+          <div className={styles.sectionLayout}>
+            <div className={styles.sectionContent}>
+              <h3 className={styles.h3}>消防署への報告義務</h3>
+              <ul className={styles.list}>
+                <li>特定防火対象物（飲食店・ホテル等）：<strong>1年に1回</strong></li>
+                <li>非特定防火対象物（マンション・事務所等）：<strong>3年に1回</strong></li>
+              </ul>
 
-          <h3 className={styles.h3}>点検の流れ</h3>
-          <ol className={styles.flow}>
-            <li>
-              <span className={styles.flowNumber}>1</span>
-              <span>お問い合わせ・ご相談</span>
-            </li>
-            <li>
-              <span className={styles.flowNumber}>2</span>
-              <span>現地調査・お見積り</span>
-            </li>
-            <li>
-              <span className={styles.flowNumber}>3</span>
-              <span>日程調整</span>
-            </li>
-            <li>
-              <span className={styles.flowNumber}>4</span>
-              <span>点検実施</span>
-            </li>
-            <li>
-              <span className={styles.flowNumber}>5</span>
-              <span>報告書作成・消防署届出</span>
-            </li>
-            <li>
-              <span className={styles.flowNumber}>6</span>
-              <span>不具合があれば改修のご提案</span>
-            </li>
-          </ol>
+              <h3 className={styles.h3}>点検の流れ</h3>
+              <ol className={styles.flow}>
+                <li>
+                  <span className={styles.flowNumber}>1</span>
+                  <span>お問い合わせ・ご相談</span>
+                </li>
+                <li>
+                  <span className={styles.flowNumber}>2</span>
+                  <span>現地調査・お見積り</span>
+                </li>
+                <li>
+                  <span className={styles.flowNumber}>3</span>
+                  <span>日程調整</span>
+                </li>
+                <li>
+                  <span className={styles.flowNumber}>4</span>
+                  <span>点検実施</span>
+                </li>
+                <li>
+                  <span className={styles.flowNumber}>5</span>
+                  <span>報告書作成・消防署届出</span>
+                </li>
+                <li>
+                  <span className={styles.flowNumber}>6</span>
+                  <span>不具合があれば改修のご提案</span>
+                </li>
+              </ol>
+            </div>
+            <div className={styles.sectionImage}>
+              <div className={`${styles.sectionImagePhoto} ${styles.sectionImagePhotoInspection}`} />
+            </div>
+          </div>
           </FadeIn>
         </div>
       </section>
@@ -153,34 +160,41 @@ export default function ServicePage() {
             <span className={styles.sectionIcon}>🔧</span>
             消防設備工事
           </h2>
-          <p className={styles.sectionLead}>
-            新築・改築に伴う消防設備の新規設置から、老朽化した既存設備の更新・改修工事まで対応しています。
-          </p>
+          <div className={styles.sectionLayout}>
+            <div className={styles.sectionContent}>
+              <p className={styles.sectionLead}>
+                新築・改築に伴う消防設備の新規設置から、老朽化した既存設備の更新・改修工事まで対応しています。
+              </p>
 
-          <h3 className={styles.h3}>対応工事</h3>
-          <ul className={styles.checkList}>
-            <li>自動火災報知設備の設計・施工</li>
-            <li>スプリンクラー設備の設置工事</li>
-            <li>屋内消火栓設備の設置工事</li>
-            <li>誘導灯・避難器具の設置</li>
-            <li>非常放送設備の設置</li>
-            <li>消火器の設置・配置計画</li>
-          </ul>
+              <h3 className={styles.h3}>対応工事</h3>
+              <ul className={styles.checkList}>
+                <li>自動火災報知設備の設計・施工</li>
+                <li>スプリンクラー設備の設置工事</li>
+                <li>屋内消火栓設備の設置工事</li>
+                <li>誘導灯・避難器具の設置</li>
+                <li>非常放送設備の設置</li>
+                <li>消火器の設置・配置計画</li>
+              </ul>
 
-          <h3 className={styles.h3}>対象建物</h3>
-          <div className={styles.tagList}>
-            {['マンション・集合住宅', 'オフィスビル・商業施設', '飲食店・ホテル', '工場・倉庫', '医療施設・福祉施設'].map((t) => (
-              <span key={t} className={styles.tag}>{t}</span>
-            ))}
+              <h3 className={styles.h3}>対象建物</h3>
+              <div className={styles.tagList}>
+                {['マンション・集合住宅', 'オフィスビル・商業施設', '飲食店・ホテル', '工場・倉庫', '医療施設・福祉施設'].map((t) => (
+                  <span key={t} className={styles.tag}>{t}</span>
+                ))}
+              </div>
+
+              <h3 className={styles.h3}>こんなときはご相談ください</h3>
+              <ul className={styles.list}>
+                <li>新築・増改築で消防設備の設置が必要</li>
+                <li>消防署から改善指導を受けた</li>
+                <li>設備が古くなり更新したい</li>
+                <li>点検で不具合が見つかった</li>
+              </ul>
+            </div>
+            <div className={styles.sectionImage}>
+              <div className={`${styles.sectionImagePhoto} ${styles.sectionImagePhotoConstruction}`} />
+            </div>
           </div>
-
-          <h3 className={styles.h3}>こんなときはご相談ください</h3>
-          <ul className={styles.list}>
-            <li>新築・増改築で消防設備の設置が必要</li>
-            <li>消防署から改善指導を受けた</li>
-            <li>設備が古くなり更新したい</li>
-            <li>点検で不具合が見つかった</li>
-          </ul>
           </FadeIn>
         </div>
       </section>
@@ -193,18 +207,25 @@ export default function ServicePage() {
             <span className={styles.sectionIcon}>⚡</span>
             電気通信工事
           </h2>
-          <p className={styles.sectionLead}>
-            消防設備は電気設備と密接に関わっています。当社では消防設備の施工に付随する電気工事もワンストップで対応可能です。
-          </p>
+          <div className={styles.sectionLayout}>
+            <div className={styles.sectionContent}>
+              <p className={styles.sectionLead}>
+                消防設備は電気設備と密接に関わっています。当社では消防設備の施工に付随する電気工事もワンストップで対応可能です。
+              </p>
 
-          <h3 className={styles.h3}>対応工事</h3>
-          <ul className={styles.checkList}>
-            <li>消防設備に伴う電気配線工事</li>
-            <li>非常放送設備工事</li>
-            <li>インターホン設備工事</li>
-            <li>自家発電設備関連の電気工事</li>
-            <li>非常用照明設備の設置</li>
-          </ul>
+              <h3 className={styles.h3}>対応工事</h3>
+              <ul className={styles.checkList}>
+                <li>消防設備に伴う電気配線工事</li>
+                <li>非常放送設備工事</li>
+                <li>インターホン設備工事</li>
+                <li>自家発電設備関連の電気工事</li>
+                <li>非常用照明設備の設置</li>
+              </ul>
+            </div>
+            <div className={styles.sectionImage}>
+              <div className={`${styles.sectionImagePhoto} ${styles.sectionImagePhotoElectrical}`} />
+            </div>
+          </div>
           </FadeIn>
         </div>
       </section>
@@ -217,29 +238,36 @@ export default function ServicePage() {
             <span className={styles.sectionIcon}>🧯</span>
             防災用品販売
           </h2>
-          <p className={styles.sectionLead}>
-            消火器をはじめとする防災用品の販売・設置を行っています。
-          </p>
+          <div className={styles.sectionLayout}>
+            <div className={styles.sectionContent}>
+              <p className={styles.sectionLead}>
+                消火器をはじめとする防災用品の販売・設置を行っています。
+              </p>
 
-          <h3 className={styles.h3}>取扱商品</h3>
-          <ul className={styles.checkList}>
-            <li>業務用消火器（粉末・強化液）</li>
-            <li>住宅用消火器</li>
-            <li>住宅用火災警報器</li>
-            <li>防災備蓄品</li>
-          </ul>
+              <h3 className={styles.h3}>取扱商品</h3>
+              <ul className={styles.checkList}>
+                <li>業務用消火器（粉末・強化液）</li>
+                <li>住宅用消火器</li>
+                <li>住宅用火災警報器</li>
+                <li>防災備蓄品</li>
+              </ul>
 
-          <h3 className={styles.h3}>消火器の点検ポイント</h3>
-          <ul className={styles.list}>
-            <li>製造年から10年以上経過していないか</li>
-            <li>ラベルや表示が読めるか</li>
-            <li>圧力ゲージが正常値を指しているか</li>
-            <li>安全栓が外れていないか</li>
-            <li>本体にサビや変形がないか</li>
-          </ul>
-          <p className={styles.note}>
-            ※ 古くなった消火器は破裂の危険があります。交換時期のご相談もお気軽にどうぞ。
-          </p>
+              <h3 className={styles.h3}>消火器の点検ポイント</h3>
+              <ul className={styles.list}>
+                <li>製造年から10年以上経過していないか</li>
+                <li>ラベルや表示が読めるか</li>
+                <li>圧力ゲージが正常値を指しているか</li>
+                <li>安全栓が外れていないか</li>
+                <li>本体にサビや変形がないか</li>
+              </ul>
+              <p className={styles.note}>
+                ※ 古くなった消火器は破裂の危険があります。交換時期のご相談もお気軽にどうぞ。
+              </p>
+            </div>
+            <div className={styles.sectionImage}>
+              <div className={`${styles.sectionImagePhoto} ${styles.sectionImagePhotoSales}`} />
+            </div>
+          </div>
           </FadeIn>
         </div>
       </section>

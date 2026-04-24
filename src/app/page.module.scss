@@ -15,7 +15,10 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: $color-secondary;
+  background-color: $color-secondary;
+  background-image: url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -24,8 +27,8 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba($color-secondary, 0.92) 0%,
-    rgba($color-secondary, 0.7) 100%
+    rgba($color-secondary, 0.78) 0%,
+    rgba($color-secondary, 0.5) 100%
   );
   z-index: 1;
 }
@@ -419,7 +422,10 @@
 .recruitBanner {
   position: relative;
   padding: 140px 0;
-  background: $color-primary;
+  background-color: $color-primary;
+  background-image: url('/images/recruit.jpg');
+  background-size: cover;
+  background-position: center 75%;
   overflow: hidden;
 
   @include sp {
@@ -432,8 +438,8 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba($color-primary, 0.95) 0%,
-    rgba(darken($color-primary, 20%), 0.95) 100%
+    rgba($color-primary, 0.7) 0%,
+    rgba(darken($color-primary, 20%), 0.6) 100%
   );
 }
 

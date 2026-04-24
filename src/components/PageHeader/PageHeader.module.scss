@@ -2,7 +2,10 @@
 @use '@/styles/foundation/mixin' as *;
 
 .pageHeader {
-  background: $color-secondary;
+  background-color: $color-secondary;
+  background-image: url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center center;
   color: $color-white;
   padding: 140px 0 60px;
   position: relative;
@@ -10,6 +13,17 @@
 
   @include sp {
     padding: 100px 0 40px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba($color-secondary, 0.85) 0%,
+      rgba($color-secondary, 0.7) 100%
+    );
   }
 
   &::after {
@@ -27,6 +41,7 @@
 .inner {
   @include inner;
   position: relative;
+  z-index: 1;
 }
 
 .en {

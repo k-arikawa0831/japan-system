@@ -6,12 +6,33 @@
 }
 
 .hero {
-  background: linear-gradient(135deg, $color-primary 0%, darken($color-primary, 15%) 100%);
+  position: relative;
+  background-color: $color-primary;
+  background-image: url('/images/recruit-hero.jpg');
+  background-size: cover;
+  background-position: center;
   color: $color-white;
   padding: 140px 0 80px;
+  overflow: hidden;
 
   @include sp {
     padding: 100px 0 60px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba($color-primary, 0.5) 0%,
+      rgba(darken($color-primary, 15%), 0.3) 100%
+    );
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
   }
 }
 
