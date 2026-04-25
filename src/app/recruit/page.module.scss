@@ -25,8 +25,9 @@
     inset: 0;
     background: linear-gradient(
       135deg,
-      rgba($color-primary, 0.5) 0%,
-      rgba(darken($color-primary, 15%), 0.3) 100%
+      rgba($color-secondary, 0.8) 0%,
+      rgba($color-primary, 0.65) 60%,
+      rgba($color-accent, 0.4) 100%
     );
   }
 
@@ -269,9 +270,127 @@
   font-weight: $font-weight-bold;
   padding: 16px 48px;
   border-radius: 4px;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
 
   &:hover {
-    background: darken($color-primary, 10%);
+    background: $color-primary-dark;
+    transform: translateY(-2px);
+  }
+}
+
+/* 求める人物像 */
+.persona {
+  padding: 100px 0;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.personaLead {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 40px;
+  color: $color-text;
+
+  @include sp {
+    font-size: 14px;
+  }
+}
+
+.personaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @include tb {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.personaCard {
+  background: $color-bg;
+  border-top: 3px solid $color-primary;
+  padding: 28px 24px 24px;
+  border-radius: 0 0 6px 6px;
+
+  &:nth-child(2) {
+    border-top-color: $color-accent;
+  }
+
+  &:nth-child(3) {
+    border-top-color: $color-secondary-light;
+  }
+
+  h3 {
+    font-size: 17px;
+    color: $color-secondary;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-text;
+    line-height: 1.9;
+  }
+}
+
+/* 評価される資格 */
+.certifications {
+  padding: 100px 0;
+  background: $color-bg;
+
+  @include sp {
+    padding: 64px 0;
+  }
+}
+
+.certLead {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 32px;
+
+  @include sp {
+    font-size: 14px;
+  }
+}
+
+.certList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  @include sp {
+    grid-template-columns: 1fr;
+  }
+}
+
+.certItem {
+  background: $color-white;
+  border-left: 4px solid $color-primary;
+  padding: 16px 20px;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.certName {
+  font-size: 15px;
+  font-weight: $font-weight-bold;
+  color: $color-secondary;
+}
+
+.certNote {
+  font-size: 13px;
+  color: $color-text-light;
+}
+
+.spBr {
+  display: none;
+
+  @include sp {
+    display: inline;
   }
 }

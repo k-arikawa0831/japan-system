@@ -25,11 +25,17 @@ export default function WorksPage() {
 
   return (
     <>
-      <PageHeader en="WORKS" ja="実績紹介" description="当社がこれまでに手がけた消防設備の点検・工事の実績をご紹介します。" />
+      <PageHeader en="WORKS" ja="実績紹介" description="高松市役所・公共施設・学校・大手企業様など、半世紀にわたり積み重ねてきた消防設備の点検・工事実績をご紹介します。" />
 
       <FadeIn>
       <section className={styles.works}>
         <div className={styles.inner}>
+          <div className={styles.notice}>
+            <p>
+              掲載は<strong>お客様のご承諾をいただいた実績</strong>のみ、順次公開しています。同業他社と同様、一部は施設名のイニシャル表記（例：T市役所）でのご紹介となる場合があります。<br />
+              本ページに掲載していない実績も多数ございます。お問い合わせの際にお気軽にご相談ください。
+            </p>
+          </div>
           <div className={styles.tabs}>
             {categories.map((c) => (
               <button

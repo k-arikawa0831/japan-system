@@ -26,6 +26,10 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
+        {/*
+          TODO: ロゴ AI データ受領後、以下をコメントアウトし <Image src="/images/logo.svg" alt="日本システムサービス" /> へ差し替え。
+          現状はテキストロゴで運用。
+        */}
         <Link href="/" className={styles.logo}>
           <span className={styles.logoMain}>日本システムサービス</span>
           <span className={styles.logoSub}>NIHON SYSTEM SERVICE</span>

@@ -54,8 +54,8 @@ const services = [
 const reasons = [
   {
     number: '01',
-    title: '地域密着20年以上',
-    description: '香川県高松市に拠点を置き、地元の建物の安全を守り続けています。地域のイベントへの参加や、事務所前の時計設置など、地域とのつながりを大切にしています。',
+    title: '地域密着50年以上',
+    description: '香川県高松市に拠点を置き、半世紀にわたって地域の建物の安全を守り続けてきました。創業から受け継がれる想いは、今も変わりません。',
   },
   {
     number: '02',
@@ -65,7 +65,25 @@ const reasons = [
   {
     number: '03',
     title: '有資格者による\n確かな技術',
-    description: '消防設備士・電気工事士の有資格者が在籍。法令に基づいた確実な点検・施工を行います。',
+    description: '消防設備士（甲種4類／乙種6類 等）・電気工事士の有資格者が在籍。法令に基づいた確実な点検・施工を行います。',
+  },
+]
+
+const history = [
+  {
+    era: '1970s',
+    heading: '創業',
+    body: '香川・高松の地で、初代社長のもと消防設備業を創業。「一人でも多くの命を救う」を胸に、地域の安全を守る歩みがはじまりました。',
+  },
+  {
+    era: '2020s',
+    heading: '新社屋 NSビルへ',
+    body: '想いを次世代へ継ぐため、新社屋へ移転。旧事務所で地域の小学生のために設置された時計は、父・叔父の判断で今も同じように、地域を見守り続けています。',
+  },
+  {
+    era: 'NEXT',
+    heading: '次の半世紀へ',
+    body: '現場で育った人が、現場で繋いでいく。消防設備と電気通信の技術で、地域の“あたりまえの安全”を次の世代へ。',
   },
 ]
 
@@ -77,17 +95,18 @@ export default function Home() {
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <FadeIn>
-            <p className={styles.heroEn}>PROTECT THE SAFETY</p>
+            <p className={styles.heroEn}>PROTECT &amp; CONNECT — SINCE 1970s</p>
           </FadeIn>
           <FadeIn delay={200}>
             <h1 className={styles.heroCatch}>
-              地域の&ldquo;あたりまえの安全&rdquo;を、<br />
-              確かな技術で守り続ける。
+              守り、繋ぐ。<br />
+              香川の&ldquo;あたりまえ&rdquo;を、半世紀。
             </h1>
           </FadeIn>
           <FadeIn delay={400}>
             <p className={styles.heroSub}>
-              香川県を中心に、消防設備の点検・工事・防災用品の販売を行っています。
+              消防設備の点検・工事、電気通信工事。<br className={styles.pcBr} />
+              半世紀にわたり、人と建物の安全を繋いできました。
             </p>
           </FadeIn>
           <FadeIn delay={600}>
@@ -116,8 +135,30 @@ export default function Home() {
           <FadeIn>
             <p className={styles.messageText}>
               私たちは、建物に設置された消防設備の<br className={styles.pcBr} />
-              <strong>点検・工事・保守</strong>を通じて、<br className={styles.pcBr} />
-              地域の安全を守る専門家集団です。
+              <strong>点検・工事・電気通信</strong>を通じて、<br className={styles.pcBr} />
+              地域の安全を守り、人と人、設備と設備を繋ぐ専門家集団です。
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Connect — 守る・繋ぐ */}
+      <section className={styles.connect}>
+        <div className={styles.connectOverlay} />
+        <div className={styles.connectInner}>
+          <FadeIn>
+            <p className={styles.connectEn}>PROTECT &amp; CONNECT</p>
+          </FadeIn>
+          <FadeIn delay={150}>
+            <h2 className={styles.connectHeading}>
+              守る、そして繋ぐ。
+            </h2>
+          </FadeIn>
+          <FadeIn delay={300}>
+            <p className={styles.connectBody}>
+              消防設備の点検で、建物と人の安全を&ldquo;守る&rdquo;。<br />
+              電気通信と工事で、設備と設備、そして人と人を&ldquo;繋ぐ&rdquo;。<br />
+              この二つが、日本システムサービスの仕事です。
             </p>
           </FadeIn>
         </div>
@@ -165,6 +206,36 @@ export default function Home() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* History — 50年の歩み */}
+      <section className={styles.history}>
+        <div className={styles.inner}>
+          <FadeIn>
+            <SectionTitle en="HISTORY" ja="50年の歩み" />
+          </FadeIn>
+          <div className={styles.historyTimeline}>
+            {history.map((h, i) => (
+              <FadeIn key={h.era} delay={i * 150}>
+                <div className={styles.historyStep}>
+                  <span className={styles.historyEra}>{h.era}</span>
+                  <h3 className={styles.historyHeading}>{h.heading}</h3>
+                  <p className={styles.historyBody}>{h.body}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn>
+            <div className={styles.moreLink}>
+              <Link href="/company">
+                会社概要を見る
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <path d="M7 4l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -227,11 +298,11 @@ export default function Home() {
           <FadeIn>
             <span className={styles.recruitEn}>RECRUIT</span>
             <h2 className={styles.recruitTitle}>
-              一緒に、地域の安全を<br />守りませんか？
+              現場で育ち、<br />現場で繋ぐ。
             </h2>
             <p className={styles.recruitText}>
-              未経験からでも一人前の技術者へ。<br />
-              資格取得も全力でサポートします。
+              消防設備の仕事は、命を預かる仕事。<br />
+              未経験からでも一人前の技術者へ、資格取得もサポートします。
             </p>
             <Link href="/recruit" className={styles.recruitBtn}>
               採用情報を見る

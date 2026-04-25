@@ -12,7 +12,31 @@ export const metadata: Metadata = {
 export default function ServicePage() {
   return (
     <>
-      <PageHeader en="SERVICE" ja="事業内容" description="消防設備の点検・工事を中心に、電気通信工事、防災用品の販売まで、建物の安全に関わるサービスをトータルで提供しています。" />
+      <PageHeader en="SERVICE" ja="事業内容" description="消防設備の点検で&rdquo;守る&rdquo;、工事・電気通信で&rdquo;繋ぐ&rdquo;。建物の安全に関わるサービスをトータルで提供しています。" />
+
+      {/* Lead — 守る・繋ぐ */}
+      <FadeIn>
+      <section className={styles.lead}>
+        <div className={styles.inner}>
+          <div className={styles.leadGrid}>
+            <div className={styles.leadItem}>
+              <span className={styles.leadKey}>守る</span>
+              <h2 className={styles.leadHeading}>点検・保守で、日常の安全を。</h2>
+              <p className={styles.leadBody}>
+                火災が起きる前に、異常を見つけ、止める。消防設備士（甲4／乙6 ほか）と電気工事士の有資格者が、法令に基づいた確実な点検と報告書作成・届出まで一括で対応します。
+              </p>
+            </div>
+            <div className={styles.leadItem}>
+              <span className={styles.leadKey}>繋ぐ</span>
+              <h2 className={styles.leadHeading}>工事・電気通信で、設備と人を。</h2>
+              <p className={styles.leadBody}>
+                設備と設備を正しく繋ぎ、人と人へ確実に伝えることで、はじめて救える命があります。新設工事から改修、電気配線・非常放送まで、消防と建物の神経回路を整えます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      </FadeIn>
 
       {/* Navigation */}
       <nav className={styles.anchorNav}>

@@ -17,13 +17,17 @@ export default function Footer() {
       <div className={styles.inner}>
         <div className={styles.top}>
           <div className={styles.info}>
+            {/*
+              TODO: ロゴ AI データ受領後、以下をコメントアウトし <Image src="/images/logo.svg" alt="日本システムサービス" /> へ差し替え。
+              現状はテキストロゴで運用。
+            */}
             <Link href="/" className={styles.logo}>
               <span className={styles.logoMain}>日本システムサービス</span>
               <span className={styles.logoSub}>NIHON SYSTEM SERVICE</span>
             </Link>
             <address className={styles.address}>
-              〒000-0000 香川県高松市○○町0-0-0<br />
-              TEL: 000-000-0000 / FAX: 000-000-0000
+              〒000-0000 香川県高松市鶴尾 NSビル【番地 要確認】<br />
+              TEL: 000-000-0000 【要確認】
             </address>
           </div>
 

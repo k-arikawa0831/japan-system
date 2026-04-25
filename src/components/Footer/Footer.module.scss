@@ -2,7 +2,7 @@
 @use '@/styles/foundation/mixin' as *;
 
 .footer {
-  background: #0F1C2E;
+  background: $color-secondary;
   color: $color-white;
 }
 

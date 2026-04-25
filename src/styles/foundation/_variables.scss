@@ -1,15 +1,18 @@
-// Colors — refined palette
-$color-primary: #C8352E;
-$color-primary-dark: #A12A24;
-$color-secondary: #1A2E44;
-$color-secondary-light: #2A4060;
-$color-accent: #E6960C;
-$color-bg: #F7F7F5;
-$color-bg-dark: #1A2E44;
-$color-text: #2D2D2D;
+// Colors — refined palette (blue/cyan brand, 2026-04-24 kickoff reflected)
+$color-primary: #0B5FA8;
+$color-primary-dark: #083F72;
+$color-secondary: #0A2647;
+$color-secondary-light: #124E8C;
+$color-accent: #29B7E6;
+$color-bg: #F6F9FC;
+$color-bg-dark: #0A2647;
+$color-text: #1F2937;
 $color-text-light: #6B7280;
-$color-border: #E5E5E5;
+$color-border: #E3E8EF;
 $color-white: #FFFFFF;
+
+// Brand gradient (primary → accent)
+$gradient-brand: linear-gradient(135deg, #0B5FA8 0%, #29B7E6 100%);
 
 // Font
 $font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;

@@ -13,6 +13,30 @@
   }
 }
 
+.notice {
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  background: $color-bg;
+  border-left: 3px solid $color-accent;
+  border-radius: 4px;
+
+  @include sp {
+    padding: 16px 18px;
+    margin-bottom: 28px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: $color-text;
+
+    strong {
+      color: $color-primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
 .tabs {
   display: flex;
   gap: 8px;

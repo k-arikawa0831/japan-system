@@ -14,16 +14,23 @@ export const metadata: Metadata = {
 export default function StaffPage() {
   return (
     <>
-      <PageHeader en="STAFF" ja="社員紹介" description="日本システムサービスで働く社員をご紹介します。一人ひとりが専門の資格を持ち、日々現場で建物の安全を守っています。" />
+      <PageHeader en="STAFF" ja="社員紹介" description="安全を繋ぐのは、いつも、人です。現場で育ち、現場で繋ぐ社員たちをご紹介します。" />
 
       <FadeIn>
       <section className={styles.staff}>
         <div className={styles.inner}>
+          <p className={styles.lead}>
+            一つの建物の奥には、何百人、時には何千人の暮らしと仕事があります。<br />
+            その日々の&ldquo;あたりまえの安全&rdquo;を支えているのは、特別な機械ではなく、現場に立ち続ける一人ひとりの技術者です。
+          </p>
           <div className={styles.grid}>
             {staffData.map((s) => (
               <StaffCard key={s.id} item={s} />
             ))}
           </div>
+          <p className={styles.note}>
+            ※ 順次、社員紹介を追加予定です。
+          </p>
         </div>
       </section>
       </FadeIn>

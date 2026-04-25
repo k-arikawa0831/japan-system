@@ -13,9 +13,69 @@
   border-bottom: 2px solid $color-primary;
 }
 
+/* 理念 */
+.philosophy {
+  padding: 120px 0 100px;
+  text-align: center;
+
+  @include sp {
+    padding: 72px 0 56px;
+  }
+}
+
+.philosophyEn {
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  letter-spacing: 0.28em;
+  margin-bottom: 18px;
+}
+
+.philosophyHeading {
+  font-size: 42px;
+  color: $color-secondary;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  margin-bottom: 40px;
+
+  @include sp {
+    font-size: 28px;
+    letter-spacing: 0.04em;
+    margin-bottom: 28px;
+  }
+}
+
+.philosophyBody {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+
+  p {
+    font-size: 15px;
+    line-height: 2.1;
+    margin-bottom: 20px;
+    color: $color-text;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: $color-primary;
+      font-weight: $font-weight-bold;
+      font-size: 18px;
+
+      @include sp {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
 /* 代表挨拶 */
 .greeting {
   padding: 100px 0;
+  background: $color-bg;
 
   @include sp {
     padding: 64px 0;
@@ -77,6 +137,83 @@
   font-weight: $font-weight-bold;
   font-size: 16px !important;
   margin-top: 24px !important;
+}
+
+/* 時計エピソード */
+.story {
+  padding: 120px 0;
+  background: $color-secondary;
+  color: $color-white;
+
+  @include sp {
+    padding: 72px 0;
+  }
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+
+  @include tb {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.storyPhoto {
+  width: 100%;
+}
+
+.storyPhotoImage {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: $color-bg-dark;
+  background-image: url('/images/company-clock.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+
+  @include sp {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.storyText {
+  p {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 16px;
+    opacity: 0.85;
+  }
+}
+
+.storyEn {
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  color: $color-accent;
+  letter-spacing: 0.28em;
+  margin-bottom: 16px !important;
+  opacity: 1 !important;
+}
+
+.storyHeading {
+  font-size: 34px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  margin-bottom: 28px;
+
+  @include sp {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 }
 
 /* 会社情報 */

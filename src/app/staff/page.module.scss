@@ -13,6 +13,22 @@
   }
 }
 
+.lead {
+  text-align: center;
+  font-size: 16px;
+  line-height: 2;
+  color: $color-text;
+  max-width: 680px;
+  margin: 0 auto 56px;
+
+  @include sp {
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: left;
+    margin-bottom: 36px;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -22,4 +38,11 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
+}
+
+.note {
+  margin-top: 36px;
+  font-size: 13px;
+  color: $color-text-light;
+  text-align: center;
 }

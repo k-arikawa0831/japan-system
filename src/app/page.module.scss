@@ -25,11 +25,13 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba($color-secondary, 0.78) 0%,
-    rgba($color-secondary, 0.5) 100%
-  );
+  background:
+    linear-gradient(
+      135deg,
+      rgba($color-secondary, 0.82) 0%,
+      rgba($color-primary, 0.55) 60%,
+      rgba($color-accent, 0.35) 100%
+    );
   z-index: 1;
 }
 
@@ -198,6 +200,72 @@
   }
 }
 
+/* ===== Connect — 守る・繋ぐ ===== */
+.connect {
+  position: relative;
+  padding: 120px 0;
+  background-color: $color-secondary;
+  background-image: url('/images/connect-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  @include sp {
+    padding: 72px 0;
+  }
+}
+
+.connectOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba($color-secondary, 0.85) 0%,
+    rgba($color-primary, 0.75) 100%
+  );
+}
+
+.connectInner {
+  @include inner;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: $color-white;
+}
+
+.connectEn {
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.28em;
+  opacity: 0.55;
+  margin-bottom: 20px;
+}
+
+.connectHeading {
+  font-size: 44px;
+  letter-spacing: 0.1em;
+  margin-bottom: 28px;
+  line-height: 1.4;
+
+  @include sp {
+    font-size: 30px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.connectBody {
+  font-size: 16px;
+  line-height: 2.1;
+  max-width: 720px;
+  margin: 0 auto;
+  opacity: 0.85;
+
+  @include sp {
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+
 /* ===== Service ===== */
 .service {
   @include section-padding;
@@ -354,6 +422,96 @@
   line-height: 1.8;
 }
 
+/* ===== History — 50年の歩み ===== */
+.history {
+  @include section-padding;
+  background: $color-bg;
+  position: relative;
+  overflow: hidden;
+}
+
+.historyTimeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: $gradient-brand;
+    opacity: 0.35;
+
+    @include sp {
+      display: none;
+    }
+  }
+
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.historyStep {
+  position: relative;
+  padding: 40px 28px 32px;
+  background: $color-white;
+  border-radius: 12px;
+  border: 1px solid $color-border;
+  transition: transform 0.3s $ease-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 32px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $gradient-brand;
+    box-shadow: 0 4px 12px rgba($color-primary, 0.25);
+
+    @include sp {
+      display: none;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.historyEra {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.historyHeading {
+  font-size: 20px;
+  color: $color-secondary;
+  line-height: 1.5;
+  margin-bottom: 14px;
+
+  @include sp {
+    font-size: 18px;
+  }
+}
+
+.historyBody {
+  font-size: 14px;
+  color: $color-text-light;
+  line-height: 1.9;
+}
+
 /* ===== Works ===== */
 .works {
   @include section-padding;
@@ -438,8 +596,8 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba($color-primary, 0.7) 0%,
-    rgba(darken($color-primary, 20%), 0.6) 100%
+    rgba($color-primary, 0.78) 0%,
+    rgba($color-secondary, 0.72) 100%
   );
 }
 
