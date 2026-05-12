@@ -14,8 +14,8 @@ export default function ContactPage() {
         <div className={styles.inner}>
           <div className={styles.telBox}>
             <p className={styles.telLabel}>お電話でのお問い合わせ</p>
-            <p className={styles.telNumber}>000-000-0000</p>
-            <p className={styles.telNote}>受付時間：平日 8:30〜17:30 ／ 電話番号は公開時までに【要確認】</p>
+            <p className={styles.telNumber}><a href="tel:0878823303">087-882-3303</a></p>
+            <p className={styles.telNote}>受付時間：平日 8:15〜17:30 ／ 土曜 8:15〜17:00</p>
           </div>
 
           <div className={styles.formArea}>
@@ -66,6 +66,8 @@ export default function ContactPage() {
                   <option value="">選択してください</option>
                   <option>消防設備点検・保守について</option>
                   <option>消防設備工事について</option>
+                  <option>防火設備検査について</option>
+                  <option>防火・防災定期点検について</option>
                   <option>電気通信工事について</option>
                   <option>防災用品（消火器ほか）について</option>
                   <option>採用について</option>

@@ -4,14 +4,14 @@
 .card {
   display: block;
   background: $color-white;
-  border-radius: 12px;
+  border-radius: $radius-card;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 18px rgba($color-secondary, 0.06);
   transition: all 0.4s $ease-out;
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 48px rgba($color-secondary, 0.12);
   }
 }
 
@@ -47,7 +47,7 @@
   color: $color-primary;
   border: 1px solid $color-primary;
   padding: 3px 12px;
-  border-radius: 50px;
+  border-radius: $radius-pill;
   margin-bottom: 10px;
   letter-spacing: 0.04em;
 }

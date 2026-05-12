@@ -32,6 +32,26 @@ const services = [
   {
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="10" y="8" width="28" height="32" rx="2" /><path d="M16 16h16M16 22h16M16 28h10" /><path d="M30 32l4 4 6-6" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    title: '防火設備検査',
+    description: '建築基準法第12条に基づく防火扉・防火シャッター等の定期検査と、特定行政庁への報告まで対応。',
+    href: '/service#fire-prevention-inspection',
+  },
+  {
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M10 12h28v28H10z" /><path d="M16 18h16M16 24h12M16 30h8" strokeLinecap="round" /><path d="M32 36l3 3 6-7" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    title: '防火・防災定期点検',
+    description: '消防法に基づく防火対象物点検・防災管理点検を、有資格者が実施から届出まで一括対応。',
+    href: '/service#periodic-inspection',
+  },
+  {
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M24 8v32M16 16l8-8 8 8M12 28h24M8 36h32" />
       </svg>
     ),
@@ -71,14 +91,14 @@ const reasons = [
 
 const history = [
   {
-    era: '1970s',
+    era: '1974',
     heading: '創業',
-    body: '香川・高松の地で、初代社長のもと消防設備業を創業。「一人でも多くの命を救う」を胸に、地域の安全を守る歩みがはじまりました。',
+    body: '昭和49年7月、香川・高松の地で先代社長が「一人でも多くの命を救う」を胸に消防設備業を創業。防災メーカーで培った経験を地域へ還元する歩みがはじまりました。',
   },
   {
     era: '2020s',
     heading: '新社屋 NSビルへ',
-    body: '想いを次世代へ継ぐため、新社屋へ移転。旧事務所で地域の小学生のために設置された時計は、父・叔父の判断で今も同じように、地域を見守り続けています。',
+    body: '想いを次世代へ継ぐため、新社屋（NSビル）へ移転。旧事務所で地域の小学生のために設置された時計は、新しい社屋でも同じように、地域を見守り続けています。',
   },
   {
     era: 'NEXT',
@@ -99,14 +119,14 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={200}>
             <h1 className={styles.heroCatch}>
-              守り、繋ぐ。<br />
-              香川の&ldquo;あたりまえ&rdquo;を、半世紀。
+              この町の安全を、<br />
+              50年以上。
             </h1>
           </FadeIn>
           <FadeIn delay={400}>
             <p className={styles.heroSub}>
-              消防設備の点検・工事、電気通信工事。<br className={styles.pcBr} />
-              半世紀にわたり、人と建物の安全を繋いできました。
+              香川・高松を中心に、消防設備の点検から電気通信工事まで。<br className={styles.pcBr} />
+              確かな技術で、地域の安全を繋ぎます。
             </p>
           </FadeIn>
           <FadeIn delay={600}>
@@ -298,7 +318,7 @@ export default function Home() {
           <FadeIn>
             <span className={styles.recruitEn}>RECRUIT</span>
             <h2 className={styles.recruitTitle}>
-              現場で育ち、<br />現場で繋ぐ。
+              &ldquo;守る&rdquo;を、<br />仕事にする。
             </h2>
             <p className={styles.recruitText}>
               消防設備の仕事は、命を預かる仕事。<br />

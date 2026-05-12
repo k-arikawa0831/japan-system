@@ -28,10 +28,11 @@
 }
 
 .date {
-  font-size: 14px;
+  font-family: $font-family-mono;
+  font-size: 13px;
   color: $color-text-light;
   flex-shrink: 0;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
 }
 
 .category {
@@ -41,7 +42,7 @@
   color: $color-white;
   background: $color-secondary;
   padding: 3px 14px;
-  border-radius: 50px;
+  border-radius: $radius-pill;
   flex-shrink: 0;
   letter-spacing: 0.04em;
 }

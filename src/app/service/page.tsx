@@ -38,12 +38,39 @@ export default function ServicePage() {
       </section>
       </FadeIn>
 
+      {/* Metrics */}
+      <FadeIn>
+      <section className={styles.metrics}>
+        <div className={styles.inner}>
+          <div className={styles.metricsGrid}>
+            <div className={styles.metricItem}>
+              <span className={styles.metricLabel}>年間点検件数</span>
+              <span className={styles.metricValue}>約1,600<small>物件</small></span>
+            </div>
+            <div className={styles.metricItem}>
+              <span className={styles.metricLabel}>法人取引比率</span>
+              <span className={styles.metricValue}>95<small>%</small></span>
+            </div>
+            <div className={styles.metricItem}>
+              <span className={styles.metricLabel}>取扱メーカー</span>
+              <span className={styles.metricMakers}>能美防災／ホーチキ／ヤマトプロテック／モリタ宮田</span>
+            </div>
+          </div>
+          <p className={styles.metricsNote}>
+            香川県内のマンション・公共施設・商業ビル・工場など、年間約1,600物件の点検実績。消防付帯工事に限らず、独立案件にも対応しています。
+          </p>
+        </div>
+      </section>
+      </FadeIn>
+
       {/* Navigation */}
       <nav className={styles.anchorNav}>
         <div className={styles.inner}>
           <ul>
             <li><a href="#inspection">消防設備点検・保守</a></li>
             <li><a href="#construction">消防設備工事</a></li>
+            <li><a href="#fire-prevention-inspection">防火設備検査</a></li>
+            <li><a href="#periodic-inspection">防火・防災定期点検</a></li>
             <li><a href="#electrical">電気通信工事</a></li>
             <li><a href="#sales">防災用品販売</a></li>
           </ul>
@@ -217,6 +244,100 @@ export default function ServicePage() {
             </div>
             <div className={styles.sectionImage}>
               <div className={`${styles.sectionImagePhoto} ${styles.sectionImagePhotoConstruction}`} />
+            </div>
+          </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* 防火設備検査 — 【仮稿】 */}
+      {/* 【仮稿】内容はクライアント確認後に差し替え。建築基準法第12条 第3項に基づく検査の表現を採用。 */}
+      <section id="fire-prevention-inspection" className={styles.section}>
+        <div className={styles.inner}>
+          <FadeIn>
+          <h2 className={styles.sectionTitle}>
+            <span className={styles.sectionIcon}>🚪</span>
+            防火設備検査
+          </h2>
+          <div className={styles.sectionLayout}>
+            <div className={styles.sectionContent}>
+              <p className={styles.sectionLead}>
+                建築基準法第12条に基づき、特定建築物に設置された防火扉・防火シャッター・防火ダンパー・耐火クロススクリーン等の防火設備は、年1回の定期検査と特定行政庁への報告が義務づけられています。当社では検査の実施から報告書作成・提出まで一括で対応します。
+              </p>
+
+              <h3 className={styles.h3}>検査対象設備</h3>
+              <ul className={styles.checkList}>
+                <li>防火扉（常時閉鎖式・随時閉鎖式）</li>
+                <li>防火シャッター</li>
+                <li>耐火クロススクリーン</li>
+                <li>ドレンチャー設備</li>
+                <li>防火ダンパー（連動用）</li>
+              </ul>
+
+              <h3 className={styles.h3}>こんなときはご相談ください</h3>
+              <ul className={styles.list}>
+                <li>新規に特定建築物に該当した</li>
+                <li>所有・管理する建物の検査時期がきた</li>
+                <li>消防設備点検と合わせて一括で依頼したい</li>
+              </ul>
+              <p className={styles.note}>※ 防火設備検査員（建築基準適合判定資格者）が在籍する事業者として、報告書作成・特定行政庁への提出までワンストップで対応します。</p>
+            </div>
+            <div className={styles.sectionImage}>
+              <div className={`${styles.sectionImagePhoto} ${styles.sectionImagePhotoConstruction}`} />
+            </div>
+          </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* 防火・防災定期点検 — 【仮稿】 */}
+      {/* 【仮稿】内容はクライアント確認後に差し替え。消防法第8条の2の2／第36条の点検報告制度に準拠。 */}
+      <section id="periodic-inspection" className={`${styles.section} ${styles.sectionAlt}`}>
+        <div className={styles.inner}>
+          <FadeIn>
+          <h2 className={styles.sectionTitle}>
+            <span className={styles.sectionIcon}>📋</span>
+            防火・防災定期点検
+          </h2>
+          <div className={styles.sectionLayout}>
+            <div className={styles.sectionContent}>
+              <p className={styles.sectionLead}>
+                消防法第8条の2の2（防火対象物点検）および第36条（防災管理点検）に基づき、一定規模・用途の防火対象物では、有資格者による定期点検と消防機関への報告が義務づけられています。当社では防火対象物点検資格者・防災管理点検資格者が点検から書類作成・届出まで対応します。
+              </p>
+
+              <h3 className={styles.h3}>点検の対象</h3>
+              <ul className={styles.checkList}>
+                <li>収容人員300人以上の特定防火対象物</li>
+                <li>地階を除く階数11以上で延床面積1万m²以上の建物（防災管理点検）</li>
+                <li>消防署長から点検報告を求められた建物</li>
+              </ul>
+
+              <h3 className={styles.h3}>点検の流れ</h3>
+              <ol className={styles.flow}>
+                <li>
+                  <span className={styles.flowNumber}>1</span>
+                  <span>ご相談・対象建物の確認</span>
+                </li>
+                <li>
+                  <span className={styles.flowNumber}>2</span>
+                  <span>事前調査・お見積り</span>
+                </li>
+                <li>
+                  <span className={styles.flowNumber}>3</span>
+                  <span>点検実施（建物用途・避難経路・防火管理体制ほか）</span>
+                </li>
+                <li>
+                  <span className={styles.flowNumber}>4</span>
+                  <span>報告書作成・消防署への届出</span>
+                </li>
+                <li>
+                  <span className={styles.flowNumber}>5</span>
+                  <span>是正が必要な事項のご提案</span>
+                </li>
+              </ol>
+            </div>
+            <div className={styles.sectionImage}>
+              <div className={`${styles.sectionImagePhoto} ${styles.sectionImagePhotoInspection}`} />
             </div>
           </div>
           </FadeIn>

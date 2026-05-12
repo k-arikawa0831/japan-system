@@ -1,24 +1,28 @@
-// Colors — refined palette (blue/cyan brand, 2026-04-24 kickoff reflected)
-$color-primary: #0B5FA8;
-$color-primary-dark: #083F72;
-$color-secondary: #0A2647;
-$color-secondary-light: #124E8C;
-$color-accent: #29B7E6;
-$color-bg: #F6F9FC;
-$color-bg-dark: #0A2647;
-$color-text: #1F2937;
-$color-text-light: #6B7280;
-$color-border: #E3E8EF;
+// Colors — warm-community palette (sora preset, 2026-05-12 redesign reflected)
+$color-primary: #007DC5;        // primary blue
+$color-primary-dark: #01659F;   // primary deep
+$color-secondary: #202D49;      // navy
+$color-secondary-light: #01659F;
+$color-accent: #009EDB;         // sky accent
+$color-bg: #EFF7FE;             // page background (ほんのり水色)
+$color-bg-dark: #202D49;
+$color-text: #202D49;
+$color-text-light: #5A6781;
+$color-border: #D7EEFF;
 $color-white: #FFFFFF;
+$color-cream-deep: #D7EEFF;     // accent surface (淡い空色)
+$color-teal: #0EA5A5;           // teal accent variation
 
 // Brand gradient (primary → accent)
-$gradient-brand: linear-gradient(135deg, #0B5FA8 0%, #29B7E6 100%);
+$gradient-brand: linear-gradient(135deg, #007DC5 0%, #009EDB 100%);
 
 // Font
-$font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, monospace;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
+$font-weight-black: 900;
 
 // Breakpoints
 $bp-sp: 767px;
@@ -31,6 +35,17 @@ $content-padding: 24px;
 // Spacing
 $section-padding: 120px;
 $section-padding-sp: 72px;
+
+// Radius
+$radius-sm: 8px;
+$radius-md: 18px;
+$radius-card: 24px;
+$radius-card-lg: 32px;
+$radius-pill: 999px;
+
+// Shadow (pop offset)
+$shadow-pop-sm: 4px 4px 0;
+$shadow-pop-md: 6px 6px 0;
 
 // Transition
 $ease-out: cubic-bezier(0.16, 1, 0.3, 1);

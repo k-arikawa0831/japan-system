@@ -29,7 +29,7 @@ export default function StaffPage() {
             ))}
           </div>
           <p className={styles.note}>
-            ※ 順次、社員紹介を追加予定です。
+            ※ 役員紹介は仮掲載中。追加社員の紹介も順次掲載予定です。
           </p>
         </div>
       </section>

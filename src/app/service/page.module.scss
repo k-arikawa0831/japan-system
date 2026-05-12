@@ -48,7 +48,7 @@
   letter-spacing: 0.2em;
   padding: 4px 14px;
   border: 1px solid currentColor;
-  border-radius: 4px;
+  border-radius: $radius-pill;
   margin-bottom: 16px;
 
   .leadItem:last-child & {
@@ -71,6 +71,81 @@
   font-size: 14px;
   line-height: 1.9;
   color: $color-text;
+}
+
+/* Metrics — 訴求材料 */
+.metrics {
+  padding: 40px 0 80px;
+
+  @include sp {
+    padding: 24px 0 48px;
+  }
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+
+  @include tb {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.metricItem {
+  background: $color-secondary;
+  color: $color-white;
+  padding: 28px 24px;
+  border-radius: $radius-md;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.metricLabel {
+  font-family: $font-family-mono;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  opacity: 0.7;
+}
+
+.metricValue {
+  font-size: 46px;
+  font-weight: $font-weight-black;
+  letter-spacing: 0.03em;
+  line-height: 1;
+
+  small {
+    font-size: 16px;
+    margin-left: 6px;
+    opacity: 0.8;
+    font-weight: $font-weight-medium;
+  }
+
+  @include sp {
+    font-size: 36px;
+  }
+}
+
+.metricMakers {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.03em;
+}
+
+.metricsNote {
+  font-size: 13px;
+  color: $color-text-light;
+  line-height: 1.8;
+  text-align: center;
+
+  @include sp {
+    text-align: left;
+  }
 }
 
 /* Anchor Nav */
@@ -285,7 +360,7 @@
   padding: 6px 16px;
   background: $color-white;
   border: 1px solid $color-border;
-  border-radius: 12px;
+  border-radius: $radius-card;
 }
 
 /* 2-column Section Layout (text left, photo right) */
@@ -315,7 +390,7 @@
   background-size: cover;
   background-position: center;
   background-color: $color-bg;
-  border-radius: 8px;
+  border-radius: $radius-md;
 }
 
 .sectionImagePhotoSales {

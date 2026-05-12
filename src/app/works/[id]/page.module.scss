@@ -67,7 +67,7 @@
 .mainImage {
   aspect-ratio: 16 / 9;
   background: $color-border;
-  border-radius: 8px;
+  border-radius: $radius-card;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,7 +193,7 @@
 .galleryItem {
   aspect-ratio: 4 / 3;
   background: $color-border;
-  border-radius: 4px;
+  border-radius: $radius-md;
   display: flex;
   align-items: center;
   justify-content: center;

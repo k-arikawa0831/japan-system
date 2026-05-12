@@ -13,8 +13,8 @@ export default function ContactCTA() {
         <div className={styles.actions}>
           <div className={styles.tel}>
             <span className={styles.telLabel}>お電話でのお問い合わせ</span>
-            <span className={styles.telNumber}>000-000-0000</span>
-            <span className={styles.telNote}>受付時間：平日 8:30〜17:30</span>
+            <a href="tel:0878823303" className={styles.telNumber}>087-882-3303</a>
+            <span className={styles.telNote}>受付時間：平日 8:15〜17:30 ／ 土曜 8:15〜17:00</span>
           </div>
           <div className={styles.divider} />
           <Link href="/contact" className={styles.button}>

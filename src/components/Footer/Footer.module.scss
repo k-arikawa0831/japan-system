@@ -25,22 +25,17 @@
 }
 
 .logo {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: inline-flex;
   margin-bottom: 20px;
+  background: $color-white;
+  padding: 10px 16px;
+  border-radius: $radius-md;
 }
 
-.logoMain {
-  font-size: 18px;
-  font-weight: $font-weight-bold;
-  letter-spacing: 0.08em;
-}
-
-.logoSub {
-  font-size: 9px;
-  opacity: 0.4;
-  letter-spacing: 0.15em;
+.logoImage {
+  width: auto;
+  height: 44px;
+  object-fit: contain;
 }
 
 .address {
@@ -48,6 +43,11 @@
   font-size: 13px;
   line-height: 2;
   opacity: 0.6;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .nav {

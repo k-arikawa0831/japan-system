@@ -17,8 +17,8 @@
   padding: 20px 24px;
   margin-bottom: 40px;
   background: $color-bg;
-  border-left: 3px solid $color-accent;
-  border-radius: 4px;
+  border-left: 4px solid $color-accent;
+  border-radius: 0 $radius-md $radius-md 0;
 
   @include sp {
     padding: 16px 18px;
@@ -53,7 +53,7 @@
   font-weight: $font-weight-bold;
   padding: 8px 20px;
   border: 1px solid $color-border;
-  border-radius: 4px;
+  border-radius: $radius-pill;
   background: $color-white;
   color: $color-text;
   transition: all 0.2s;

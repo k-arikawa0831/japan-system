@@ -43,12 +43,16 @@ const requirements = [
   { label: '仕事内容', value: '消防設備の点検・工事・電気通信工事、報告書作成、消防届出補助（公共施設・マンション・工場・学校などを担当）' },
   { label: '応募資格', value: '普通自動車免許（AT限定可）、学歴不問、未経験歓迎' },
   { label: '歓迎資格', value: '消防設備士（甲種4類／乙種6類 ほか）、電気工事士 ※入社後の取得支援あり' },
-  { label: '給与', value: '月給 ○○万円〜○○万円（経験・資格により優遇）【要確認】' },
-  { label: '昇給・賞与', value: '昇給：年1回／賞与：年2回' },
-  { label: '勤務時間', value: '8:30〜17:30（休憩60分）【要確認】' },
-  { label: '休日', value: '土日祝、夏季休暇、年末年始休暇、有給休暇' },
-  { label: '福利厚生', value: '社会保険完備、資格取得支援制度、作業着貸与、車通勤可' },
-  { label: '勤務地', value: '香川県高松市鶴尾 NSビル【番地 要確認】' },
+  { label: '給与', value: '経験・資格に応じて優遇いたします。詳細は面談にてご相談ください。【要確認：月給レンジ】' },
+  { label: '昇給・賞与', value: '昇給：年1回／賞与：原則年2回' },
+  { label: '試用期間', value: '3ヶ月（条件変動なし）' },
+  { label: '勤務時間', value: '8:15〜17:30（休憩1時間35分）' },
+  { label: '休日', value: '日・祝・その他会社指定日／年間休日 105日（2026年4月〜2027年3月実績）／夏季・年末年始休暇・有給休暇' },
+  { label: '福利厚生', value: '社会保険完備、資格取得支援制度、作業着貸与、車通勤可（通勤手当あり）、退職金制度あり' },
+  { label: '各種手当', value: '役職手当／営工手当／資格手当／皆勤手当／住宅手当／家族手当／勤続手当／通勤手当' },
+  { label: '採用予定数', value: '毎年1〜2名（退職補充＋優秀人材の随時採用）' },
+  { label: '選考フロー', value: '書類選考 → 面接（1〜2回）→ 内定' },
+  { label: '勤務地', value: '香川県高松市鶴市町160-1 NSビル' },
 ]
 
 const steps = [
@@ -67,7 +71,7 @@ export default function RecruitPage() {
           <span className={styles.recruitEn}>RECRUIT</span>
           <h1 className={styles.recruitJa}>採用情報</h1>
           <h2 className={styles.heroMessage}>
-            現場で育ち、<br className={styles.spBr} />現場で繋ぐ。
+            &ldquo;守る&rdquo;を、<br className={styles.spBr} />仕事にする。
           </h2>
           <p className={styles.heroText}>
             消防設備の仕事は、命を預かる仕事です。<br />

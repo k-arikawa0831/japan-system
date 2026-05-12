@@ -4,3 +4,9 @@ out/
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
+
+# 素材ソース（撮影元画像。使用分は public/images/ にリネーム配置済み）
+/*.jpg
+/*.JPG
+/*.jpeg
+/*.png

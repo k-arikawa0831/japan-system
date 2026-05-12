@@ -3,9 +3,9 @@
 
 .pageHeader {
   background-color: $color-secondary;
-  background-image: url('/images/hero-bg.jpg');
+  background-image: url('/images/building-day.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center 65%;
   color: $color-white;
   padding: 140px 0 60px;
   position: relative;
@@ -46,20 +46,22 @@
 
 .en {
   display: block;
+  font-family: $font-family-mono;
   font-size: 12px;
   font-weight: $font-weight-bold;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  opacity: 0.4;
+  opacity: 0.55;
   margin-bottom: 12px;
 }
 
 .ja {
-  font-size: 36px;
-  letter-spacing: 0.06em;
+  font-size: 38px;
+  letter-spacing: 0.04em;
+  font-weight: $font-weight-black;
 
   @include sp {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 

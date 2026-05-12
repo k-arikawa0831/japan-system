@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Header.module.scss'
 
 const navItems = [
@@ -26,13 +27,15 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        {/*
-          TODO: ロゴ AI データ受領後、以下をコメントアウトし <Image src="/images/logo.svg" alt="日本システムサービス" /> へ差し替え。
-          現状はテキストロゴで運用。
-        */}
-        <Link href="/" className={styles.logo}>
-          <span className={styles.logoMain}>日本システムサービス</span>
-          <span className={styles.logoSub}>NIHON SYSTEM SERVICE</span>
+        <Link href="/" className={styles.logo} aria-label="日本システムサービス株式会社">
+          <Image
+            src="/images/logo-mark.jpg"
+            alt="日本システムサービス株式会社"
+            width={1300}
+            height={680}
+            priority
+            className={styles.logoImage}
+          />
         </Link>
 
         <div className={styles.headerRight}>
@@ -65,7 +68,13 @@ export default function Header() {
       <div className={`${styles.overlay} ${isOpen ? styles.open : ''}`} onClick={() => setIsOpen(false)} />
       <nav className={`${styles.spNav} ${isOpen ? styles.open : ''}`}>
         <div className={styles.spNavHeader}>
-          <span className={styles.spNavLogo}>日本システムサービス</span>
+          <Image
+            src="/images/logo-mark.jpg"
+            alt="日本システムサービス"
+            width={1300}
+            height={680}
+            className={styles.spNavLogo}
+          />
           <button className={styles.closeBtn} onClick={() => setIsOpen(false)} aria-label="閉じる">
             <span /><span />
           </button>
@@ -83,7 +92,7 @@ export default function Header() {
         </ul>
         <div className={styles.spNavTel}>
           <span>お電話でのお問い合わせ</span>
-          <strong>000-000-0000</strong>
+          <a href="tel:0878823303"><strong>087-882-3303</strong></a>
         </div>
       </nav>
     </header>

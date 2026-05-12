@@ -19,9 +19,10 @@
 
 .en {
   display: block;
+  font-family: $font-family-mono;
   font-size: 12px;
   font-weight: $font-weight-bold;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   margin-bottom: 12px;
 
@@ -30,18 +31,20 @@
   }
 
   .light & {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
   }
 }
 
 .ja {
-  font-size: 32px;
+  font-size: 34px;
   line-height: 1.4;
   position: relative;
   display: inline-block;
+  font-weight: $font-weight-black;
+  letter-spacing: 0.04em;
 
   @include sp {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .dark & {
@@ -55,10 +58,11 @@
   &::after {
     content: '';
     display: block;
-    width: 40px;
-    height: 3px;
+    width: 48px;
+    height: 4px;
     background: $color-primary;
-    margin-top: 16px;
+    margin-top: 18px;
+    border-radius: $radius-pill;
 
     .center & {
       margin-left: auto;

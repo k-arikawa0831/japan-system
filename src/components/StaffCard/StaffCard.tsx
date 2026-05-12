@@ -6,7 +6,7 @@ type Props = {
 }
 
 export default function StaffCard({ item }: Props) {
-  const years = new Date().getFullYear() - item.joinYear
+  const years = item.joinYear ? new Date().getFullYear() - item.joinYear : null
 
   return (
     <div className={styles.card}>
@@ -17,14 +17,18 @@ export default function StaffCard({ item }: Props) {
       <div className={styles.body}>
         <h3 className={styles.name}>{item.name}</h3>
         <div className={styles.meta}>
-          <span>{item.joinYear}年入社（勤続{years}年）</span>
+          {item.joinYear ? (
+            <span>{item.joinYear}年入社（勤続{years}年）</span>
+          ) : null}
           <span>{item.role}</span>
         </div>
-        <div className={styles.qualifications}>
-          {item.qualifications.map((q) => (
-            <span key={q} className={styles.badge}>{q}</span>
-          ))}
-        </div>
+        {item.qualifications.length > 0 && (
+          <div className={styles.qualifications}>
+            {item.qualifications.map((q) => (
+              <span key={q} className={styles.badge}>{q}</span>
+            ))}
+          </div>
+        )}
         <dl className={styles.qa}>
           {item.qa.map((item) => (
             <div key={item.question} className={styles.qaItem}>

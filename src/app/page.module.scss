@@ -16,9 +16,9 @@
   display: flex;
   align-items: center;
   background-color: $color-secondary;
-  background-image: url('/images/hero-bg.jpg');
+  background-image: url('/images/hero-team.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 40%;
   overflow: hidden;
 }
 
@@ -44,25 +44,27 @@
 }
 
 .heroEn {
+  font-family: $font-family-mono;
   font-size: 13px;
   font-weight: $font-weight-bold;
-  letter-spacing: 0.25em;
-  opacity: 0.4;
+  letter-spacing: 0.28em;
+  opacity: 0.55;
   margin-bottom: 20px;
 }
 
 .heroCatch {
-  font-size: 48px;
-  line-height: 1.4;
+  font-size: 56px;
+  line-height: 1.35;
   margin-bottom: 24px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
+  font-weight: $font-weight-black;
 
   @include tb {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   @include sp {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 
@@ -97,14 +99,15 @@
   font-size: 15px;
   font-weight: $font-weight-bold;
   padding: 16px 36px;
-  border-radius: 50px;
+  border-radius: $radius-pill;
   letter-spacing: 0.06em;
-  transition: all 0.3s;
+  transition: all 0.2s;
+  box-shadow: $shadow-pop-sm rgba(0, 0, 0, 0.3);
 
   &:hover {
     background: $color-primary-dark;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba($color-primary, 0.4);
+    transform: translate(-2px, -2px);
+    box-shadow: $shadow-pop-md rgba(0, 0, 0, 0.32);
   }
 
   svg {
@@ -123,7 +126,7 @@
   color: $color-white;
   padding: 16px 36px;
   border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50px;
+  border-radius: $radius-pill;
   letter-spacing: 0.06em;
   transition: all 0.3s;
 
@@ -205,7 +208,7 @@
   position: relative;
   padding: 120px 0;
   background-color: $color-secondary;
-  background-image: url('/images/connect-bg.jpg');
+  background-image: url('/images/building-day.jpg');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -234,10 +237,11 @@
 }
 
 .connectEn {
+  font-family: $font-family-mono;
   font-size: 12px;
   font-weight: $font-weight-bold;
-  letter-spacing: 0.28em;
-  opacity: 0.55;
+  letter-spacing: 0.3em;
+  opacity: 0.6;
   margin-bottom: 20px;
 }
 
@@ -274,7 +278,7 @@
 
 .serviceGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 
   @include tb {
@@ -292,7 +296,7 @@
   flex-direction: column;
   padding: 40px 28px 32px;
   background: $color-white;
-  border-radius: 12px;
+  border-radius: $radius-card;
   transition: all 0.4s $ease-out;
   position: relative;
   overflow: hidden;
@@ -387,7 +391,7 @@
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 40px 32px;
-  border-radius: 12px;
+  border-radius: $radius-card;
   color: $color-white;
   transition: all 0.3s;
 
@@ -461,7 +465,7 @@
   position: relative;
   padding: 40px 28px 32px;
   background: $color-white;
-  border-radius: 12px;
+  border-radius: $radius-card;
   border: 1px solid $color-border;
   transition: transform 0.3s $ease-out;
 
@@ -488,10 +492,11 @@
 
 .historyEra {
   display: inline-block;
+  font-family: $font-family-mono;
   font-size: 13px;
   font-weight: $font-weight-bold;
   color: $color-primary;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   margin-bottom: 16px;
 }
 
@@ -545,7 +550,7 @@
     color: $color-primary;
     padding: 12px 32px;
     border: 1px solid $color-primary;
-    border-radius: 50px;
+    border-radius: $radius-pill;
     transition: all 0.3s;
     letter-spacing: 0.06em;
 
@@ -581,9 +586,9 @@
   position: relative;
   padding: 140px 0;
   background-color: $color-primary;
-  background-image: url('/images/recruit.jpg');
+  background-image: url('/images/people-onsite.jpg');
   background-size: cover;
-  background-position: center 75%;
+  background-position: center 60%;
   overflow: hidden;
 
   @include sp {
@@ -611,10 +616,11 @@
 
 .recruitEn {
   display: block;
+  font-family: $font-family-mono;
   font-size: 12px;
   font-weight: $font-weight-bold;
-  letter-spacing: 0.25em;
-  opacity: 0.5;
+  letter-spacing: 0.28em;
+  opacity: 0.6;
   margin-bottom: 16px;
 }
 
@@ -648,13 +654,14 @@
   font-size: 15px;
   font-weight: $font-weight-bold;
   padding: 16px 40px;
-  border-radius: 50px;
+  border-radius: $radius-pill;
   letter-spacing: 0.06em;
-  transition: all 0.3s;
+  transition: all 0.2s;
+  box-shadow: $shadow-pop-sm rgba(0, 0, 0, 0.28);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transform: translate(-2px, -2px);
+    box-shadow: $shadow-pop-md rgba(0, 0, 0, 0.3);
   }
 
   svg {
